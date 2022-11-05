@@ -7,6 +7,60 @@
 }
 
 .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60px;
     width: 1150px;
+}
+
+.search{
+    display: flex;
+    background-color: #f1f1f2;
+    width: 361px;
+    height: 46px;
+    border-radius: 92px;
+
+    input{
+        flex: 1;
+        height: 46px;
+        margin-left: 14px;
+        background-color: transparent;
+    }
+
+    &::after{
+        content: ' ';
+        position: absolute;
+        width: 1px;
+        top: 16px;
+        height: 28px;
+        right: 474px;
+        background-color: rgba(22, 24, 35, .12);
+    }
+}
+
+.close, .loading{
+    position: absolute;
+    top: 24px;
+    right: calc(18px + 474px);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+
+.search_btn{
+    width: 54px;
+    height: 46px;
+    font-size: 1.3rem;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #4c4e57;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
 }
