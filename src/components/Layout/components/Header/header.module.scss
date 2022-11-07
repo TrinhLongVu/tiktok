@@ -20,12 +20,18 @@
     width: 361px;
     height: 46px;
     border-radius: 92px;
+    border: 1.5px solid transparent;
 
     input{
         flex: 1;
-        height: 46px;
         margin-left: 14px;
         background-color: transparent;
+        font-size: 1rem; 
+        caret-color: var(--primary);
+    }
+
+    input:not(:placeholder-shown) ~ .search_btn {
+        color: var(--black);
     }
 
     &::after{
@@ -37,19 +43,27 @@
         right: 474px;
         background-color: rgba(22, 24, 35, .12);
     }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
 }
 
-.close, .loading{
+.close, 
+.loading{
     position: absolute;
     top: 24px;
     right: calc(18px + 474px);
     color: rgba(22, 24, 35, 0.34);
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
 }
 
 
 .search_btn{
     width: 54px;
-    height: 46px;
     font-size: 1.3rem;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
