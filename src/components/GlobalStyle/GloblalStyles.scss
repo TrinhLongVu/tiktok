@@ -5,10 +5,11 @@
     --primary: #fe2c55;
     --black: #000;
     --text-color: #333;
+    --white: #fff;
 }
 
 html{
-
+    font-size: 62.5%;
 }
 
 *{
@@ -19,7 +20,6 @@ html{
 
 body {
     font-family: ibm-plex-sans, sans-serif;
-    font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
     color: var(--text-color);
